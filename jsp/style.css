@@ -1,0 +1,20 @@
+* {padding:0; margin:0;}
+html {font-family: Tahoma, Dotum, "돋움"; font-size: 0.75em;}
+body {font-size: 1em; text-align:center;}
+#wrap {width:500px; margin:0 auto; text-align:left;}
+#footer {text-align:center; padding:10px 0;}
+#footer input {vertical-align:middle;}
+fieldset {border:none;}
+legend {display:none; visibility:hidden;}
+table {table-layout: fixed; border-collapse: collapse; padding: 0; border-style: solid; border-width: 1px 1px 0 1px; border-color: #bbb;}
+th {text-align:left; padding:3px;  border-collapse: 0; border-style: solid; border-width: 0 0 1px 0; border-color: #bbb; background:#ddd;}
+td {text-align:left; border-collapse: 0; border-style: solid; border-width: 0 0 1px 0; border-color: #bbb; padding: 3px;}
+input {font-family: Tahoma, Dotum, "돋움"; font-size:1em;}
+td span {font-size:.9em; color:#cc0000;}
+h1 {font-size:1.4em; text-align:center; padding:10px 0;}
+.w300 {width:300px;}
+.w380 {width:380px;}
+.descB {padding:2px 0; display:block;}
+th.subTitle {color:#339900; background:#fff !important; padding:8px 0 8px 5px;}
+.inputBtn {border:1px solid #ccc; padding:3px 5px; line-height:1em; font-size:.9em;}
+#footer .inputBtn {font-size:1.2em; font-weight:bold;}
