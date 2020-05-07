@@ -72,3 +72,34 @@
 2. JSP 페이지에서 발생한 예외 타입이 web.xml 파일의 <exception-type>에서 지정한 예외 타입과 동일한 경우 지정한 에러 페이지를 보여준다.
 3. JSP 페이지에서 발생한 에러 코드가 web.xml 파일의 <error-code>에서 지정한 에러 코드와 동일한 경우 지정한 에러 페이지를 보여준다.
 4. 아무것도 해당되지 않을 경우 웹 컨테이너가 제공하는 기본 에러 페이지를 보여준다.
+
+# 세션 Session
+
+- 세션이란
+    - 웹 컨에이너에서 클라이언트의 정보를 보관할 때 사용
+    - 오직 서버에서만 생성
+    - 클라이언트마다 세션이 생성
+    - 세션이 존재하지 않을 경우 세션이 생성되고, 세션이 존재할 경우 이미 생성된 세션을 사용
+    ```
+    <%@ page contentType = ... %>
+    <%@ page session = "true" %>
+    <%
+    ...
+    session.setAttribute("userInfo", userInfo);
+    getAttribute
+    ...
+    %>
+    ```
+- 세션 종료/타임 아웃
+    - session.invalidate() 을 이용해서 세션 종료
+    - 세션이 종료되면 기존에 생성된 세션이 삭제 이후 접근 시 새로운 세션 생성 됨
+    - 마지막 세션 사용 이후 유효 시간이 지나면 자동 종료
+        - web.xml 지정
+        ```
+        <session-config>
+            <session-timeout>
+            30
+            </session-timeout>
+        </session-config>
+        ```
+        - 또는 session 기본 객체의 setMaxInactiveInterval() 메서드 이용해서 지정
